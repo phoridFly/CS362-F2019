@@ -1087,7 +1087,7 @@ int cardEffectMinion(int choice1, int choice2, struct gameState *state, int hand
         //discard card from hand
         discardCard(handPos, currentPlayer, state, 0);
 
-		if (choice2)
+		if (choice1)
         {
             state->coins = state->coins + 2;
         }
@@ -1137,7 +1137,7 @@ int cardEffectAmbassador(int choice1, int choice2, struct gameState *state, int 
     int i, j;
     j = 0;		//used to check if player has enough cards to discard
 
-        if (choice2 > 2 && choice2 < 0)
+        if (choice2 > 2 || choice2 < 0)
         {
             return -1;
         }
