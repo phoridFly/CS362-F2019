@@ -1087,7 +1087,7 @@ int cardEffectMinion(int choice1, int choice2, struct gameState *state, int hand
         //discard card from hand
         discardCard(handPos, currentPlayer, state, 0);
 
-		if (choice2)
+		if (choice1)
         {
             state->coins = state->coins + 2;
         }
